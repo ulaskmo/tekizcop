@@ -36,13 +36,9 @@ export function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section className="relative isolate overflow-hidden bg-charcoal-950 py-section">
+    <section className="relative isolate overflow-hidden bg-brand-50 py-section">
       <div
-        className="absolute inset-0 -z-10 bg-grid-fade bg-grid opacity-30"
-        aria-hidden
-      />
-      <div
-        className="absolute -right-32 top-1/4 -z-10 h-96 w-96 rounded-full bg-brand-700/20 blur-[110px]"
+        className="absolute -right-32 top-1/4 -z-10 h-96 w-96 rounded-full bg-brand-200/60 blur-[110px]"
         aria-hidden
       />
 
@@ -50,7 +46,6 @@ export function Testimonials() {
         <SectionHeading
           label="Referans Görüşleri"
           title="Sahada birlikte çalıştığımız kurumlar ne diyor?"
-          tone="light"
           align="center"
         />
 
@@ -76,17 +71,17 @@ export function Testimonials() {
                 transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center text-center"
               >
-                <QuoteIcon className="h-9 w-9 text-brand-500/70" />
+                <QuoteIcon className="h-9 w-9 text-brand-500" />
 
-                <blockquote className="mt-6 text-lg leading-relaxed text-charcoal-100 sm:text-xl sm:leading-relaxed">
+                <blockquote className="mt-6 text-lg leading-relaxed text-charcoal-700 sm:text-xl sm:leading-relaxed">
                   “{active.quote}”
                 </blockquote>
 
                 <figcaption className="mt-7">
-                  <p className="font-display font-semibold text-white">
+                  <p className="font-display font-semibold text-charcoal-950">
                     {active.author}
                   </p>
-                  <p className="mt-1 text-sm text-charcoal-400">
+                  <p className="mt-1 text-sm text-charcoal-500">
                     {active.role} · {active.company}
                   </p>
                 </figcaption>
@@ -99,7 +94,7 @@ export function Testimonials() {
               type="button"
               onClick={prev}
               aria-label="Önceki referans"
-              className="grid h-11 w-11 place-items-center rounded-full text-charcoal-300 ring-1 ring-inset ring-white/15 transition-all duration-200 hover:bg-white/10 hover:text-white"
+              className="grid h-11 w-11 place-items-center rounded-full text-charcoal-600 ring-1 ring-inset ring-charcoal-200 transition-all duration-200 hover:bg-white hover:text-charcoal-950"
             >
               <ChevronLeftIcon className="h-5 w-5" />
             </button>
@@ -115,8 +110,8 @@ export function Testimonials() {
                     className={cn(
                       "h-1.5 rounded-full transition-all duration-300 ease-out-expo",
                       i === index
-                        ? "w-7 bg-brand-400"
-                        : "w-1.5 bg-white/25 hover:bg-white/50",
+                        ? "w-7 bg-brand-600"
+                        : "w-1.5 bg-charcoal-300 hover:bg-charcoal-400",
                     )}
                   />
                 </li>
@@ -127,7 +122,7 @@ export function Testimonials() {
               type="button"
               onClick={next}
               aria-label="Sonraki referans"
-              className="grid h-11 w-11 place-items-center rounded-full text-charcoal-300 ring-1 ring-inset ring-white/15 transition-all duration-200 hover:bg-white/10 hover:text-white"
+              className="grid h-11 w-11 place-items-center rounded-full text-charcoal-600 ring-1 ring-inset ring-charcoal-200 transition-all duration-200 hover:bg-white hover:text-charcoal-950"
             >
               <ChevronRightIcon className="h-5 w-5" />
             </button>
