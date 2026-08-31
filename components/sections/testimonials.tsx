@@ -61,11 +61,12 @@ export function Testimonials() {
           onFocus={() => setPaused(true)}
           onBlur={() => setPaused(false)}
         >
-          <div
-            className="relative min-h-[19rem] sm:min-h-[16rem]"
-            aria-live="polite"
-            aria-atomic="true"
-          >
+          {/*
+            mode="wait" aynı anda tek slayt render ettiği için yüksekliği
+            içerik belirler; sabit yükseklik verilse uzun alıntılar mobilde
+            taşardı. layout animasyonu geçişteki sıçramayı yumuşatır.
+          */}
+          <motion.div layout aria-live="polite" aria-atomic="true">
             <AnimatePresence mode="wait" initial={false}>
               <motion.figure
                 key={active.id}
@@ -73,7 +74,7 @@ export function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: direction * -40 }}
                 transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center"
               >
                 <QuoteIcon className="h-9 w-9 text-brand-500/70" />
 
@@ -91,7 +92,7 @@ export function Testimonials() {
                 </figcaption>
               </motion.figure>
             </AnimatePresence>
-          </div>
+          </motion.div>
 
           <div className="mt-10 flex items-center justify-center gap-5">
             <button

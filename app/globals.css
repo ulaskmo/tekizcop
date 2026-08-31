@@ -30,8 +30,13 @@
     @apply bg-brand-600 text-white;
   }
 
+  /*
+   * ring-offset rengi devralınır; koyu bölümler kendi arka planını
+   * `[--tw-ring-offset-color]` ile ayarlamak zorunda kalmaz.
+   */
   :focus-visible {
-    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2;
+    --tw-ring-offset-color: transparent;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -97,6 +102,15 @@
   .prose-tekiz th,
   .prose-tekiz td {
     @apply border-b border-charcoal-200 px-3 py-2.5;
+  }
+
+  .prose-tekiz thead th {
+    @apply bg-charcoal-50 font-semibold text-charcoal-900;
+  }
+
+  /* Markdown tabloları mobilde yatay kaydırılabilir olmalı. */
+  .prose-tekiz > table {
+    @apply block max-w-full overflow-x-auto;
   }
 }
 

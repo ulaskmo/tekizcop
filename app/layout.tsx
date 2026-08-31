@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { MotionProvider } from "@/components/layout/motion-provider";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { categories } from "@/data/categories";
 import { fullAddress, siteConfig } from "@/data/site";
@@ -130,12 +131,14 @@ export default function RootLayout({
         >
           İçeriğe geç
         </a>
-        <Header />
-        <main id="icerik" className="flex-1 pt-20">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+        <MotionProvider>
+          <Header />
+          <main id="icerik" className="flex-1 pt-20">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </MotionProvider>
       </body>
     </html>
   );

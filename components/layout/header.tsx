@@ -60,7 +60,7 @@ export function Header() {
                       <Link
                         href={item.href}
                         className={cn(
-                          "relative inline-flex h-10 items-center rounded-full px-3.5 text-[0.9375rem] font-medium transition-colors",
+                          "relative inline-flex h-10 items-center rounded-full px-2.5 text-sm font-medium transition-colors xl:px-3.5 xl:text-[0.9375rem]",
                           active
                             ? "text-brand-800"
                             : "text-charcoal-700 hover:text-charcoal-950",
@@ -87,13 +87,19 @@ export function Header() {
                     className="relative"
                     onMouseEnter={() => setOpenDropdown(item.label)}
                     onMouseLeave={() => setOpenDropdown(null)}
+                    onBlur={(e) => {
+                      // Klavye ile gezinirken odak menüden çıktığında kapat.
+                      if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                        setOpenDropdown(null);
+                      }
+                    }}
                   >
                     <Link
                       href={item.href}
                       aria-expanded={dropdownOpen}
                       onFocus={() => setOpenDropdown(item.label)}
                       className={cn(
-                        "relative inline-flex h-10 items-center gap-1.5 rounded-full px-3.5 text-[0.9375rem] font-medium transition-colors",
+                        "relative inline-flex h-10 items-center gap-1.5 rounded-full px-2.5 text-sm font-medium transition-colors xl:px-3.5 xl:text-[0.9375rem]",
                         active
                           ? "text-brand-800"
                           : "text-charcoal-700 hover:text-charcoal-950",

@@ -86,7 +86,7 @@ export function Footer() {
 
           <nav
             aria-label="Site haritası"
-            className="grid gap-10 sm:grid-cols-3 lg:col-span-6 lg:col-start-6"
+            className="grid gap-10 sm:grid-cols-3 lg:col-span-6"
           >
             {footerNav.map((column) => (
               <div key={column.title}>
