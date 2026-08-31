@@ -3,7 +3,7 @@ title: "Galvaniz mi Plastik mi? Doğru Konteyner Seçimi için 6 Kriter"
 date: "2025-01-22"
 category: "Teknik"
 author: "Tekiz Teknik Ekip"
-coverImage: "https://picsum.photos/seed/tekiz-haber-galvaniz-plastik/1600/900"
+coverImage: "/images/placeholders/yatay-04.jpg"
 excerpt: "İki malzeme arasındaki fark yalnızca fiyat değil. Kullanım yoğunluğu, iklim, gürültü ve on yıllık toplam maliyet üzerinden karşılaştırdık."
 ---
 

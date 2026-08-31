@@ -3,7 +3,7 @@ title: "Çöp Konteynerinin Ömrü Nasıl Uzatılır? Bakım Kontrol Listesi"
 date: "2024-06-11"
 category: "Teknik"
 author: "Tekiz Teknik Ekip"
-coverImage: "https://picsum.photos/seed/tekiz-haber-bakim/1600/900"
+coverImage: "/images/placeholders/yatay-11.jpg"
 excerpt: "Konteyner ömrünü kısaltan sorunların çoğu üretim hatası değil, ihmal edilen basit bakım adımları. Aylık ve yıllık kontrol listemizi paylaşıyoruz."
 ---
 

@@ -3,7 +3,7 @@ title: "Kadıköy Sahil Bandı Yeraltı Konteyner Projesi Tamamlandı"
 date: "2024-10-02"
 category: "Proje"
 author: "Tekiz Çöp Konteyner"
-coverImage: "https://picsum.photos/seed/tekiz-haber-kadikoy/1600/900"
+coverImage: "/images/placeholders/yatay-02.jpg"
 excerpt: "42 noktada kurulan yeraltı toplama sistemiyle sahil bandındaki görüntü kirliliği ortadan kalktı, toplama sefer sayısı üçte bir oranında azaldı."
 ---
 

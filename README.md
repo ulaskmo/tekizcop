@@ -75,7 +75,27 @@ veya haber eklendiğinde ek bir işlem gerekmez.
 
 ## Görseller
 
-Şu anda tüm görseller `picsum.photos` üzerinden üretilen placeholder'lardır
-(`lib/utils.ts` içindeki `placeholderImage`). Gerçek fotoğraflar
-`public/images/` altına eklendiğinde veri dosyalarındaki `images` alanları
-yerel yollarla değiştirilir. İlgili yerlerde `TODO` notları bırakılmıştır.
+Tüm görseller **yereldir**; site hiçbir dış görsel servisine bağlı değildir.
+`public/images/placeholders/` altındaki dosyalar marka paletinde üretilmiş
+soyut endüstriyel kompozisyonlardır (12 yatay + 6 dikey varyant).
+
+`lib/utils.ts` içindeki `placeholderImage(seed, w, h)` fonksiyonu seed'i
+hash'leyerek her ürün/proje için sabit bir varyant seçer; `h > w` olduğunda
+dikey varyantlardan seçim yapar. Aynı seed her zaman aynı görseli verir,
+böylece derlemeler arasında içerik zıplaması olmaz.
+
+```bash
+npm run placeholders   # placeholder görsellerini yeniden üretir
+npm run icons          # favicon / apple-icon / logo-mark üretir
+```
+
+Gerçek fotoğraflar geldiğinde `public/images/urunler/` altına eklenip veri
+dosyalarındaki `images` alanları doğrudan bu yollarla değiştirilir; ilgili
+yerlerde `TODO` notları bırakılmıştır.
+
+## Logo
+
+Logo sembolünün geometrisi tek bir yerde tanımlıdır: **`lib/brand-mark.json`**.
+Hem header'daki logo bileşeni (`components/ui/logo.tsx`) hem favicon üreteci
+bu dosyayı okur, böylece ikisi arasında fark oluşmaz. Sembolü değiştirmek için
+JSON içindeki `paths` alanını güncelleyip `npm run icons` çalıştırmak yeterlidir.

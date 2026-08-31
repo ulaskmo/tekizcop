@@ -3,7 +3,7 @@ title: "Sıfır Atık Yönetmeliği: Belediyeler için Uygulama Rehberi"
 date: "2025-02-18"
 category: "Mevzuat"
 author: "Tekiz Teknik Ekip"
-coverImage: "https://picsum.photos/seed/tekiz-haber-sifir-atik/1600/900"
+coverImage: "/images/placeholders/yatay-05.jpg"
 excerpt: "Kaynakta ayrıştırma zorunluluğu belediyeler için ne anlama geliyor? Renk kodlaması, konteyner seçimi ve saha uygulamasında dikkat edilmesi gereken noktaları derledik."
 ---
 

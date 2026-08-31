@@ -3,7 +3,7 @@ title: "ISO 9001, 14001 ve 45001 Belgelerimiz Yenilendi"
 date: "2024-02-06"
 category: "Kurumsal"
 author: "Tekiz Çöp Konteyner"
-coverImage: "https://picsum.photos/seed/tekiz-haber-iso/1600/900"
+coverImage: "/images/placeholders/yatay-08.jpg"
 excerpt: "Kalite, çevre ve iş güvenliği yönetim sistemi belgelerimiz TÜRKAK akrediteli kuruluş denetiminden geçerek yenilendi. Denetim raporunda üç iyi uygulama örneği kaydedildi."
 ---
 

@@ -3,7 +3,7 @@ title: "Robotik Kaynak Hattımız Devreye Alındı"
 date: "2024-08-14"
 category: "Kurumsal"
 author: "Tekiz Çöp Konteyner"
-coverImage: "https://picsum.photos/seed/tekiz-haber-robotik-kaynak/1600/900"
+coverImage: "/images/placeholders/yatay-09.jpg"
 excerpt: "Hadımköy tesisimizdeki yeni robotik kaynak yatırımı ile kaynak dikişlerinde partiler arası fark ortadan kalktı, üretim kapasitemiz %40 arttı."
 ---
 

@@ -3,7 +3,7 @@ title: "Yeraltı Çöp Konteyneri Sistemleri: Maliyet ve Kent Estetiği"
 date: "2024-04-03"
 category: "Teknik"
 author: "Tekiz Teknik Ekip"
-coverImage: "https://picsum.photos/seed/tekiz-haber-yeralti/1600/900"
+coverImage: "/images/placeholders/yatay-03.jpg"
 excerpt: "İlk yatırım maliyeti klasik konteynere göre yüksek görünen yeraltı sistemleri, sefer sayısı ve alan kazancı hesaba katıldığında ortalama 4 yılda kendini amorti ediyor."
 ---
 

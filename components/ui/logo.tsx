@@ -2,17 +2,22 @@ import Link from "next/link";
 
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { BrandMark } from "./brand-mark";
 
 type LogoProps = {
-  /** Koyu zeminde kullanım için beyaz tipografi. */
+  /** Koyu zeminde kullanım için açık tipografi. */
   variant?: "dark" | "light";
   className?: string;
 };
 
 /**
- * Tipografik logo.
- * TODO: Gerçek logo dosyası geldiğinde bu bileşenin içi
- * <Image src="/images/logo.svg" ... /> ile değiştirilecek.
+ * Logo kilidi: altıgen plaka içinde izometrik konteyner + iki satırlı wordmark.
+ *
+ * Altıgen, jenerik yuvarlak/kare kurumsal rozetlerden ayırır; sembol düz bir
+ * çöp kutusu değil, üretici kimliğini taşıyan 3B konteynerdir.
+ *
+ * TODO: Basılı iş için hazırlanmış bir logo dosyası geldiğinde
+ * <BrandMark /> yerine <Image src="/images/logo.svg" ... /> kullanılabilir.
  */
 export function Logo({ variant = "dark", className }: LogoProps) {
   const isLight = variant === "light";
@@ -20,35 +25,29 @@ export function Logo({ variant = "dark", className }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label={`${siteConfig.name} ana sayfa`}
+      aria-label={`${siteConfig.name} — ana sayfa`}
       className={cn("group flex items-center gap-3", className)}
     >
       <span
         className={cn(
-          "grid h-11 w-11 shrink-0 place-items-center rounded-xl transition-transform duration-300 ease-out-expo group-hover:-translate-y-0.5",
-          isLight ? "bg-brand-500 text-white" : "bg-brand-700 text-white",
+          "relative grid h-11 w-11 shrink-0 place-items-center bg-gradient-to-br from-brand-500 to-brand-950 text-white shadow-sm transition-all duration-500 ease-out-expo group-hover:-translate-y-0.5 group-hover:shadow-md",
         )}
+        style={{
+          clipPath:
+            "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
+        }}
       >
-        <svg
-          viewBox="0 0 24 24"
-          className="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1.7}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        <span
+          className="absolute inset-0 bg-gradient-to-b from-white/25 to-transparent"
           aria-hidden
-        >
-          <path d="M4.5 7.5h15l-1.3 12.2a1.5 1.5 0 0 1-1.5 1.3H7.3a1.5 1.5 0 0 1-1.5-1.3L4.5 7.5Z" />
-          <path d="M3 7.5h18" />
-          <path d="M9.5 7.5V5a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 14.5 5v2.5" />
-          <path d="M10 11.5v6M14 11.5v6" />
-        </svg>
+        />
+        <BrandMark className="relative h-[1.55rem] w-[1.55rem]" />
       </span>
+
       <span className="flex flex-col leading-none">
         <span
           className={cn(
-            "font-display text-lg font-extrabold tracking-tight",
+            "font-display text-[1.125rem] font-extrabold uppercase leading-none tracking-[0.08em]",
             isLight ? "text-white" : "text-charcoal-950",
           )}
         >
@@ -56,8 +55,15 @@ export function Logo({ variant = "dark", className }: LogoProps) {
         </span>
         <span
           className={cn(
-            "mt-0.5 text-[0.6875rem] font-medium uppercase tracking-[0.18em]",
-            isLight ? "text-brand-200" : "text-brand-700",
+            "mt-1.5 h-px w-8",
+            isLight ? "bg-brand-400/70" : "bg-brand-600",
+          )}
+          aria-hidden
+        />
+        <span
+          className={cn(
+            "mt-1.5 text-[0.5625rem] font-semibold uppercase leading-none tracking-[0.22em]",
+            isLight ? "text-brand-300" : "text-brand-700",
           )}
         >
           Çöp Konteyner
