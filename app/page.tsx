@@ -1,20 +1,23 @@
-import { siteConfig } from "@/data/site";
+import { AboutSummary } from "@/components/sections/about-summary";
+import { FeaturedProducts } from "@/components/sections/featured-products";
+import { Hero } from "@/components/sections/hero";
+import { NewsPreview } from "@/components/sections/news-preview";
+import { QuoteCta } from "@/components/sections/quote-cta";
+import { ReferenceMarquee } from "@/components/sections/reference-marquee";
+import { StatsBar } from "@/components/sections/stats-bar";
+import { Testimonials } from "@/components/sections/testimonials";
 
-// Geçici iskele sayfası — 4. adımda tam ana sayfa ile değiştirilecek.
 export default function HomePage() {
   return (
-    <div className="flex items-center bg-charcoal-950 bg-grid-fade bg-grid">
-      <div className="container-page py-section">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-400">
-          Ortak yerleşim hazır
-        </p>
-        <h1 className="max-w-3xl text-display-md text-white sm:text-display-lg">
-          {siteConfig.name}
-        </h1>
-        <p className="mt-6 max-w-xl text-lg text-charcoal-300">
-          {siteConfig.description}
-        </p>
-      </div>
-    </div>
+    <>
+      <Hero />
+      <StatsBar />
+      <ReferenceMarquee />
+      <FeaturedProducts />
+      <AboutSummary />
+      <Testimonials />
+      <NewsPreview />
+      <QuoteCta />
+    </>
   );
 }

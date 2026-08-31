@@ -107,6 +107,8 @@ export type Stat = {
   prefix?: string;
   /** Sayının sonuna eklenen metin, ör. "+" veya "'ten beri". */
   suffix?: string;
+  /** Binlik ayırıcı uygulanmaz — yıl gibi değerler için. */
+  plain?: boolean;
   label: string;
 };
 

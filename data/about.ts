@@ -8,10 +8,10 @@ import type { Stat, TimelineEntry, ValueItem } from "./types";
  */
 
 export const stats: Stat[] = [
-  { value: 1985, suffix: "", label: "Kuruluş yılı" },
+  { value: 1985, suffix: "'ten beri", plain: true, label: "Kesintisiz üretim" },
   { value: 500, suffix: "+", label: "Tamamlanan proje" },
   { value: 81, suffix: " il", label: "Sevkiyat ağı" },
-  { value: 40, suffix: "+", label: "Yıllık üretim deneyimi" },
+  { value: 12000, suffix: " m²", label: "Kapalı üretim alanı" },
 ];
 
 export const aboutParagraphs = [
