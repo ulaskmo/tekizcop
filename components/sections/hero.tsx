@@ -15,6 +15,28 @@ const highlights = [
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
+function HeroCtas() {
+  return (
+    <>
+      <ButtonLink href="/urunler" size="lg" className="group w-full sm:w-auto">
+        Ürünleri keşfet
+        <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+      </ButtonLink>
+      <ButtonLink
+        href={siteConfig.whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="outline"
+        size="lg"
+        className="w-full sm:w-auto"
+      >
+        <WhatsAppIcon className="h-5 w-5 text-brand-700" />
+        WhatsApp ile teklif al
+      </ButtonLink>
+    </>
+  );
+}
+
 export function Hero() {
   const reduce = useReducedMotion();
 
@@ -35,47 +57,100 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="container-page grid items-center gap-10 py-10 sm:gap-12 sm:py-16 sm:pb-24 lg:grid-cols-2 lg:gap-16 lg:py-24 lg:pb-28">
-        <div className="min-w-0 max-lg:order-2">
-          <motion.h1
-            {...rise(0)}
-            className="text-display-sm text-charcoal-950 sm:text-display-md lg:text-display-lg xl:text-display-xl"
-          >
-            Atık toplamanın{" "}
-            <span className="relative text-brand-700">
-              dayanıklı
-              <svg
-                viewBox="0 0 200 12"
-                className="absolute -bottom-1.5 left-0 h-2.5 w-full text-brand-400"
-                fill="none"
-                preserveAspectRatio="none"
-                aria-hidden
-              >
-                <path
-                  d="M2 9C40 3 92 2 198 6"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            tarafında duruyoruz
-          </motion.h1>
+      <div className="container-page py-8 sm:py-16 sm:pb-24 lg:py-24 lg:pb-28">
+        <div className="grid grid-cols-2 items-center gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16">
+          <div className="min-w-0">
+            <motion.h1
+              {...rise(0)}
+              className="text-[1.375rem] leading-[1.15] tracking-tight text-charcoal-950 sm:text-display-sm md:text-display-md lg:text-display-lg xl:text-display-xl"
+            >
+              Atık toplamanın{" "}
+              <span className="relative text-brand-700">
+                dayanıklı
+                <svg
+                  viewBox="0 0 200 12"
+                  className="absolute -bottom-1.5 left-0 h-2.5 w-full text-brand-400"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M2 9C40 3 92 2 198 6"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>{" "}
+              tarafında duruyoruz
+            </motion.h1>
 
-          <motion.p
-            {...rise(0.1)}
-            className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-charcoal-600 sm:mt-7 sm:text-lg"
-          >
-            Galvaniz, plastik ve yeraltı çöp konteynerlerini kendi tesisimizde
-            üretiyoruz. Sac kesimden galvaniz banyosuna kadar tüm süreç bizde
-            olduğu için kaliteyi ve teslim tarihini biz garanti ediyoruz.
-          </motion.p>
+            <motion.p
+              {...rise(0.1)}
+              className="mt-3 text-pretty text-sm leading-relaxed text-charcoal-600 sm:mt-5 sm:text-base lg:mt-7 lg:text-lg"
+            >
+              Galvaniz, plastik ve yeraltı çöp konteynerlerini kendi tesisimizde
+              üretiyoruz. Sac kesimden galvaniz banyosuna kadar tüm süreç bizde
+              olduğu için kaliteyi ve teslim tarihini biz garanti ediyoruz.
+            </motion.p>
 
-          <motion.ul {...rise(0.18)} className="mt-6 flex flex-wrap gap-x-5 gap-y-2.5 sm:mt-8 sm:gap-x-6 sm:gap-y-3">
+            <motion.ul
+              {...rise(0.18)}
+              className="mt-8 hidden flex-wrap gap-x-6 gap-y-3 lg:flex"
+            >
+              {highlights.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-[0.9375rem] text-charcoal-700"
+                >
+                  <CheckIcon className="h-4.5 w-4.5 shrink-0 text-brand-600" />
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
+
+            <motion.div
+              {...rise(0.26)}
+              className="mt-10 hidden flex-wrap gap-3 lg:flex"
+            >
+              <HeroCtas />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: reduce ? 1 : 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: reduce ? 0 : 0.9, delay: 0.12, ease }}
+            className="relative min-w-0 sm:pb-8 lg:pb-4"
+          >
+            <HeroVisual
+              src="/images/hero-galvaniz-konteyner.jpg"
+              alt="800 litre sıcak daldırma galvaniz çöp konteyneri — üç çeyrek stüdyo görünümü"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: reduce ? 0 : 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: reduce ? 0 : 0.7, delay: 0.45, ease }}
+              className="absolute -bottom-4 left-2 right-2 hidden rounded-2xl border border-brand-100 bg-white p-3 shadow-card-hover sm:left-6 sm:right-auto sm:block sm:max-w-[13.5rem] sm:p-4 md:-bottom-6 md:max-w-xs md:p-5"
+            >
+              <p className="font-display text-2xl font-extrabold tracking-tight text-charcoal-950 md:text-3xl">
+                500<span className="text-brand-600">+</span>
+              </p>
+              <p className="mt-1 text-xs leading-relaxed text-charcoal-600 md:text-sm">
+                Belediye, sanayi ve kampüs projesi tamamlandı
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <motion.ul
+            {...rise(0.18)}
+            className="col-span-2 flex flex-wrap gap-x-4 gap-y-2 lg:hidden"
+          >
             {highlights.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-2 text-sm text-charcoal-700 sm:text-[0.9375rem]"
+                className="flex items-center gap-2 text-sm text-charcoal-700"
               >
                 <CheckIcon className="h-4.5 w-4.5 shrink-0 text-brand-600" />
                 {item}
@@ -83,50 +158,13 @@ export function Hero() {
             ))}
           </motion.ul>
 
-          <motion.div {...rise(0.26)} className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
-            <ButtonLink href="/urunler" size="lg" className="group w-full sm:w-auto">
-              Ürünleri keşfet
-              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </ButtonLink>
-            <ButtonLink
-              href={siteConfig.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              <WhatsAppIcon className="h-5 w-5 text-brand-700" />
-              WhatsApp ile teklif al
-            </ButtonLink>
+          <motion.div
+            {...rise(0.26)}
+            className="col-span-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:hidden"
+          >
+            <HeroCtas />
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: reduce ? 1 : 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: reduce ? 0 : 0.9, delay: 0.12, ease }}
-          className="relative min-w-0 max-lg:order-first lg:pb-4"
-        >
-          <HeroVisual
-            src="/images/hero-galvaniz-konteyner.jpg"
-            alt="800 litre sıcak daldırma galvaniz çöp konteyneri — üç çeyrek stüdyo görünümü"
-          />
-
-          <motion.div
-            initial={{ opacity: 0, y: reduce ? 0 : 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduce ? 0 : 0.7, delay: 0.45, ease }}
-            className="relative mx-4 -mt-8 rounded-2xl border border-brand-100 bg-white p-4 shadow-card-hover sm:absolute sm:-bottom-6 sm:left-8 sm:right-auto sm:mx-0 sm:mt-0 sm:max-w-xs sm:p-5"
-          >
-            <p className="font-display text-3xl font-extrabold tracking-tight text-charcoal-950">
-              500<span className="text-brand-600">+</span>
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-charcoal-600">
-              Belediye, sanayi ve kampüs projesi tamamlandı
-            </p>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

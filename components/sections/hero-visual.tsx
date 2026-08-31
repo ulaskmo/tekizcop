@@ -19,8 +19,8 @@ type HeroVisualProps = {
 /**
  * Ana sayfa kahraman görseli.
  *
- * En-boy oranı kırılıma göre değişir (telefon 4/3, tablet 5/4, masaüstü 4/5)
- * böylece fotoğraf her genişlikte çerçeveyi doldurur, taşmaz.
+ * En-boy oranı kırılıma göre değişir (telefon 3/4 yan kolon, tablet 4/5,
+ * masaüstü 4/5) böylece fotoğraf metinle yan yana kalır, alta düşmez.
  * 3B eğilme yalnızca fare + hover destekleyen cihazlarda açılır; dokunmatikte
  * düz kalır ki yatay taşma olmasın.
  *
@@ -65,7 +65,7 @@ export function HeroVisual({ src, alt }: HeroVisualProps) {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-3xl sm:rounded-4xl" style={{ perspective: 1200 }}>
+    <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl lg:rounded-4xl" style={{ perspective: 1200 }}>
       <motion.div
         ref={ref}
         onMouseMove={onMove}
@@ -75,14 +75,14 @@ export function HeroVisual({ src, alt }: HeroVisualProps) {
             ? { rotateX, rotateY, transformStyle: "preserve-3d" }
             : undefined
         }
-        className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-brand-100 bg-white shadow-card-hover touch-pan-y sm:aspect-[5/4] sm:rounded-4xl lg:aspect-[4/5]"
+        className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card-hover touch-pan-y sm:aspect-[4/5] sm:rounded-3xl lg:rounded-4xl"
       >
         <Image
           src={src}
           alt={alt}
           fill
           priority
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 50vw, 50vw"
           className="object-cover object-[center_40%]"
         />
 
