@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: 5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-white text-charcoal-800 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-charcoal-950;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-12;
+  }
+
+  .prose-tekiz {
+    @apply text-[1.0625rem] leading-relaxed text-charcoal-600;
+  }
+
+  .prose-tekiz h2 {
+    @apply mb-4 mt-12 text-2xl font-semibold sm:text-3xl;
+  }
+
+  .prose-tekiz h3 {
+    @apply mb-3 mt-8 text-xl font-semibold sm:text-2xl;
+  }
+
+  .prose-tekiz p {
+    @apply mb-5;
+  }
+
+  .prose-tekiz ul {
+    @apply mb-5 list-disc space-y-2 pl-5;
+  }
+
+  .prose-tekiz ol {
+    @apply mb-5 list-decimal space-y-2 pl-5;
+  }
+
+  .prose-tekiz a {
+    @apply font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:decoration-brand-600;
+  }
+
+  .prose-tekiz blockquote {
+    @apply my-6 border-l-2 border-brand-500 bg-brand-50 px-5 py-4 italic text-charcoal-700;
+  }
+
+  .prose-tekiz strong {
+    @apply font-semibold text-charcoal-900;
+  }
+
+  .prose-tekiz table {
+    @apply mb-6 w-full border-collapse text-left text-sm;
+  }
+
+  .prose-tekiz th,
+  .prose-tekiz td {
+    @apply border-b border-charcoal-200 px-3 py-2.5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Yatay kaydırmalı bölümlerde scrollbar'ı gizler */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
