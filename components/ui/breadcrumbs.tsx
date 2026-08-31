@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ChevronRightIcon } from "./icons";
 
@@ -20,8 +21,25 @@ export function Breadcrumbs({
 }) {
   const isLight = tone === "light";
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [{ label: "Ana Sayfa", href: "/" }, ...items].map(
+      (item, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.label,
+        ...(item.href ? { item: `${siteConfig.url}${item.href}` } : {}),
+      }),
+    ),
+  };
+
   return (
     <nav aria-label="Sayfa yolu" className={className}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ol
         className={cn(
           "flex flex-wrap items-center gap-1.5 text-sm",
