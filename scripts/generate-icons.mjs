@@ -110,12 +110,14 @@ async function main() {
     path.join(publicDir, "apple-touch-icon-precomposed.png"),
   );
 
-  // 3) Klasik favicon.ico (32×32)
+  // 3) Klasik favicon.ico — public altına yazılır. app/favicon.ico Next'in
+  //    metadata route üreticisini tetikler ve HMR sırasında webpack chunk
+  //    kaybına yol açar (Cannot find module './NNN.js').
   const png32 = await sharp(Buffer.from(iconSvg(32, 0.13)))
     .resize(32, 32)
     .png()
     .toBuffer();
-  fs.writeFileSync(path.join(appDir, "favicon.ico"), buildIco(png32, 32));
+  fs.writeFileSync(path.join(publicDir, "favicon.ico"), buildIco(png32, 32));
 
   // 4) Basılı/paylaşım kullanımı için sembolün tek başına SVG'si
   const imagesDir = path.join(root, "public", "images");
