@@ -1,12 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button";
 import { ArrowRightIcon, CheckIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { siteConfig } from "@/data/site";
-import { placeholderImage } from "@/lib/utils";
+import { HeroVisual } from "./hero-visual";
 
 const highlights = [
   "Sıcak daldırma galvaniz üretim",
@@ -108,17 +107,10 @@ export function Hero() {
           transition={{ duration: reduce ? 0 : 0.9, delay: 0.12, ease }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-4xl border border-brand-100 shadow-card-hover sm:aspect-[5/4] lg:aspect-[4/5]">
-            {/* TODO: Gerçek tesis/ürün fotoğrafı ile değiştirilecek. */}
-            <Image
-              src={placeholderImage("tekiz-hero-ana", 1200, 1500)}
-              alt="Tekiz Çöp Konteyner üretim tesisi ve galvaniz konteyner serisi"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <HeroVisual
+            src="/images/hero-galvaniz-konteyner.jpg"
+            alt="800 litre sıcak daldırma galvaniz çöp konteyneri — üç çeyrek stüdyo görünümü"
+          />
 
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 20 }}

@@ -238,11 +238,11 @@ export default function ProductDetailPage({ params }: Params) {
           <div className="lg:col-span-5">
             <Reveal from="right">
               <div className="overflow-hidden rounded-3xl border border-charcoal-200 bg-white shadow-card lg:sticky lg:top-28">
-                <div className="border-b border-charcoal-200 bg-charcoal-900 px-6 py-5">
-                  <h2 className="font-display text-lg font-semibold text-white">
+                <div className="border-b border-brand-100 bg-brand-50 px-6 py-5">
+                  <h2 className="font-display text-lg font-semibold text-charcoal-950">
                     Teknik özellikler
                   </h2>
-                  <p className="mt-1 text-sm text-charcoal-400">{product.code}</p>
+                  <p className="mt-1 text-sm text-charcoal-500">{product.code}</p>
                 </div>
 
                 <table className="w-full text-left text-sm">

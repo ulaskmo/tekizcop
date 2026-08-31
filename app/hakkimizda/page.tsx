@@ -80,11 +80,11 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal from="right">
-              <div className="h-full rounded-4xl bg-charcoal-950 p-8 shadow-card sm:p-10">
-                <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-300">
+              <div className="h-full rounded-4xl border border-brand-100 bg-brand-50 p-8 shadow-card sm:p-10">
+                <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-700">
                   Vizyonumuz
                 </h2>
-                <p className="mt-5 text-xl leading-relaxed text-charcoal-100 sm:text-[1.375rem] sm:leading-relaxed">
+                <p className="mt-5 text-xl leading-relaxed text-charcoal-800 sm:text-[1.375rem] sm:leading-relaxed">
                   {visionStatement}
                 </p>
               </div>

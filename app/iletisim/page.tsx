@@ -90,8 +90,8 @@ export default function ContactPage() {
 
           <div className="lg:col-span-5">
             <Reveal from="right">
-              <div className="rounded-4xl bg-charcoal-950 p-8 sm:p-9">
-                <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-300">
+              <div className="rounded-4xl border border-brand-100 bg-brand-50 p-8 sm:p-9">
+                <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-700">
                   Doğrudan iletişim
                 </h2>
 
@@ -101,14 +101,14 @@ export default function ContactPage() {
                       href={siteConfig.phoneHref}
                       className="group flex items-start gap-4"
                     >
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-brand-300 transition-colors group-hover:bg-brand-700 group-hover:text-white">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-700 ring-1 ring-inset ring-brand-100 transition-colors group-hover:bg-brand-700 group-hover:text-white">
                         <PhoneIcon className="h-5 w-5" />
                       </span>
                       <span>
                         <span className="block text-xs font-medium uppercase tracking-wider text-charcoal-500">
                           Telefon
                         </span>
-                        <span className="mt-1 block font-semibold text-white">
+                        <span className="mt-1 block font-semibold text-charcoal-950">
                           {siteConfig.phone}
                         </span>
                       </span>
@@ -122,14 +122,14 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="group flex items-start gap-4"
                     >
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-brand-300 transition-colors group-hover:bg-[#25D366] group-hover:text-white">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-700 ring-1 ring-inset ring-brand-100 transition-colors group-hover:bg-[#25D366] group-hover:text-white">
                         <WhatsAppIcon className="h-5 w-5" />
                       </span>
                       <span>
                         <span className="block text-xs font-medium uppercase tracking-wider text-charcoal-500">
                           WhatsApp
                         </span>
-                        <span className="mt-1 block font-semibold text-white">
+                        <span className="mt-1 block font-semibold text-charcoal-950">
                           Hemen mesaj gönderin
                         </span>
                       </span>
@@ -141,14 +141,14 @@ export default function ContactPage() {
                       href={siteConfig.emailHref}
                       className="group flex items-start gap-4"
                     >
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-brand-300 transition-colors group-hover:bg-brand-700 group-hover:text-white">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-700 ring-1 ring-inset ring-brand-100 transition-colors group-hover:bg-brand-700 group-hover:text-white">
                         <MailIcon className="h-5 w-5" />
                       </span>
                       <span>
                         <span className="block text-xs font-medium uppercase tracking-wider text-charcoal-500">
                           E-posta
                         </span>
-                        <span className="mt-1 block break-all font-semibold text-white">
+                        <span className="mt-1 block break-all font-semibold text-charcoal-950">
                           {siteConfig.email}
                         </span>
                       </span>
@@ -156,21 +156,21 @@ export default function ContactPage() {
                   </li>
 
                   <li className="flex items-start gap-4">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-brand-300">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-700 ring-1 ring-inset ring-brand-100">
                       <MapPinIcon className="h-5 w-5" />
                     </span>
                     <span>
                       <span className="block text-xs font-medium uppercase tracking-wider text-charcoal-500">
                         Adres
                       </span>
-                      <address className="mt-1 not-italic leading-relaxed text-charcoal-200">
+                      <address className="mt-1 not-italic leading-relaxed text-charcoal-700">
                         {fullAddress}
                       </address>
                     </span>
                   </li>
 
                   <li className="flex items-start gap-4">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-brand-300">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-700 ring-1 ring-inset ring-brand-100">
                       <ClockIcon className="h-5 w-5" />
                     </span>
                     <span className="w-full">
@@ -183,8 +183,8 @@ export default function ContactPage() {
                             key={slot.days}
                             className="flex justify-between gap-4 text-sm"
                           >
-                            <dt className="text-charcoal-300">{slot.days}</dt>
-                            <dd className="font-medium text-charcoal-400">
+                            <dt className="text-charcoal-700">{slot.days}</dt>
+                            <dd className="font-medium text-charcoal-500">
                               {slot.hours}
                             </dd>
                           </div>

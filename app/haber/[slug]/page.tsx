@@ -73,13 +73,14 @@ export default function NewsDetailPage({ params }: Params) {
       />
 
       <article>
-        <header className="relative isolate overflow-hidden bg-charcoal-950">
+        <header className="relative isolate overflow-hidden bg-brand-50">
           <div
-            className="absolute inset-0 -z-10 bg-grid-fade bg-grid opacity-25"
+            className="absolute -left-24 top-0 -z-10 h-80 w-80 rounded-full bg-brand-200/50 blur-[110px]"
             aria-hidden
           />
           <div className="container-page py-14 lg:py-20">
             <Breadcrumbs
+              tone="dark"
               items={[
                 { label: "Haberler", href: "/haberler" },
                 { label: post.title },
@@ -87,8 +88,8 @@ export default function NewsDetailPage({ params }: Params) {
             />
 
             <div className="mt-8 max-w-3xl">
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-charcoal-400">
-                <span className="rounded-full bg-brand-700/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-300 ring-1 ring-inset ring-brand-500/30">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-charcoal-500">
+                <span className="rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-800">
                   {post.category}
                 </span>
                 <time dateTime={post.date}>{formatDateTR(post.date)}</time>
@@ -96,11 +97,11 @@ export default function NewsDetailPage({ params }: Params) {
                 <span>{post.readingTime} dk okuma</span>
               </div>
 
-              <h1 className="mt-6 text-display-sm text-white sm:text-display-md">
+              <h1 className="mt-6 text-display-sm text-charcoal-950 sm:text-display-md">
                 {post.title}
               </h1>
 
-              <p className="mt-6 text-[1.0625rem] leading-relaxed text-charcoal-300">
+              <p className="mt-6 text-[1.0625rem] leading-relaxed text-charcoal-600">
                 {post.excerpt}
               </p>
 

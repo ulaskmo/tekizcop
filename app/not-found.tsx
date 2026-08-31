@@ -17,19 +17,19 @@ const suggestions = [
 
 export default function NotFound() {
   return (
-    <section className="relative isolate overflow-hidden bg-charcoal-950">
+    <section className="relative isolate overflow-hidden bg-brand-50">
       <div
-        className="absolute inset-0 -z-10 bg-grid-fade bg-grid opacity-30"
+        className="absolute -left-24 top-0 -z-10 h-80 w-80 rounded-full bg-brand-200/50 blur-[110px]"
         aria-hidden
       />
       <div className="container-page flex min-h-[60vh] flex-col justify-center py-section">
-        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-300">
+        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">
           Hata 404
         </p>
-        <h1 className="mt-5 max-w-2xl text-display-sm text-white sm:text-display-md">
+        <h1 className="mt-5 max-w-2xl text-display-sm text-charcoal-950 sm:text-display-md">
           Aradığınız sayfayı bulamadık
         </h1>
-        <p className="mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-charcoal-300">
+        <p className="mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-charcoal-600">
           Adres değişmiş veya sayfa kaldırılmış olabilir. Aşağıdaki
           bağlantılardan devam edebilir ya da doğrudan bize yazabilirsiniz.
         </p>
@@ -37,7 +37,7 @@ export default function NotFound() {
         <ul className="mt-9 flex flex-wrap gap-2.5">
           {suggestions.map((item) => (
             <li key={item.href}>
-              <ButtonLink href={item.href} variant="light" size="sm">
+              <ButtonLink href={item.href} variant="outline" size="sm">
                 {item.label}
               </ButtonLink>
             </li>

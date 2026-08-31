@@ -11,7 +11,7 @@ type PageHeroProps = {
   children?: ReactNode;
 };
 
-/** İç sayfaların ortak koyu başlık bloğu. */
+/** İç sayfaların ortak açık başlık bloğu. */
 export function PageHero({
   label,
   title,
@@ -20,38 +20,34 @@ export function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-charcoal-950">
+    <section className="relative isolate overflow-hidden bg-brand-50">
       <div
-        className="absolute inset-0 -z-10 bg-grid-fade bg-grid opacity-30"
-        aria-hidden
-      />
-      <div
-        className="absolute -left-24 -top-24 -z-10 h-80 w-80 rounded-full bg-brand-700/25 blur-[110px]"
+        className="absolute -left-24 -top-24 -z-10 h-80 w-80 rounded-full bg-brand-200/50 blur-[110px]"
         aria-hidden
       />
 
       <div className="container-page py-14 lg:py-20">
-        <Breadcrumbs items={breadcrumbs} />
+        <Breadcrumbs items={breadcrumbs} tone="dark" />
 
         <div className="mt-8 max-w-3xl">
           {label ? (
             <Reveal from="none">
-              <span className="mb-4 inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">
-                <span className="h-px w-8 bg-brand-400/60" aria-hidden />
+              <span className="mb-4 inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
+                <span className="h-px w-8 bg-brand-400" aria-hidden />
                 {label}
               </span>
             </Reveal>
           ) : null}
 
           <Reveal delay={0.05}>
-            <h1 className="text-display-sm text-white sm:text-display-md">
+            <h1 className="text-display-sm text-charcoal-950 sm:text-display-md">
               {title}
             </h1>
           </Reveal>
 
           {description ? (
             <Reveal delay={0.12}>
-              <div className="mt-5 text-[1.0625rem] leading-relaxed text-charcoal-300">
+              <div className="mt-5 text-[1.0625rem] leading-relaxed text-charcoal-600">
                 {description}
               </div>
             </Reveal>
