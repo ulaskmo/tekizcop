@@ -50,7 +50,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-5">
             <Reveal from="right">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-4xl shadow-card-hover">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card-hover sm:rounded-4xl lg:aspect-[4/5]">
                 {/* TODO: Gerçek tesis fotoğrafı ile değiştirilecek. */}
                 <Image
                   src={placeholderImage("tekiz-hakkimizda-hero", 1000, 1250)}
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="grid gap-8 lg:grid-cols-2">
             <Reveal from="left">
-              <div className="h-full rounded-4xl border border-charcoal-200 bg-white p-8 shadow-card sm:p-10">
+              <div className="h-full rounded-3xl border border-charcoal-200 bg-white p-6 shadow-card sm:rounded-4xl sm:p-10">
                 <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-700">
                   Misyonumuz
                 </h2>
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal from="right">
-              <div className="h-full rounded-4xl border border-brand-100 bg-brand-50 p-8 shadow-card sm:p-10">
+              <div className="h-full rounded-3xl border border-brand-100 bg-brand-50 p-6 shadow-card sm:rounded-4xl sm:p-10">
                 <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-700">
                   Vizyonumuz
                 </h2>

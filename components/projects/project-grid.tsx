@@ -26,7 +26,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
 
   return (
     <div>
-      <div className="-mx-5 overflow-x-auto px-5 no-scrollbar lg:mx-0 lg:px-0">
+      <div className="-mx-4 overflow-x-auto px-4 no-scrollbar sm:-mx-8 sm:px-8 lg:mx-0 lg:px-0">
         <ul className="flex w-max items-center gap-2">
           {tabs.map((tab) => {
             const isActive = tab === filter;

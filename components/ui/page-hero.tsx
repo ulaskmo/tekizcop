@@ -26,7 +26,7 @@ export function PageHero({
         aria-hidden
       />
 
-      <div className="container-page py-14 lg:py-20">
+      <div className="container-page py-10 sm:py-14 lg:py-20">
         <Breadcrumbs items={breadcrumbs} tone="dark" />
 
         <div className="mt-8 max-w-3xl">
@@ -47,7 +47,7 @@ export function PageHero({
 
           {description ? (
             <Reveal delay={0.12}>
-              <div className="mt-5 text-[1.0625rem] leading-relaxed text-charcoal-600">
+              <div className="mt-5 text-pretty text-base leading-relaxed text-charcoal-600 sm:text-[1.0625rem]">
                 {description}
               </div>
             </Reveal>

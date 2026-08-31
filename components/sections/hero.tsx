@@ -35,14 +35,14 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="container-page grid items-center gap-14 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
-        <div>
+      <div className="container-page grid items-center gap-10 py-10 sm:gap-12 sm:py-16 sm:pb-24 lg:grid-cols-2 lg:gap-16 lg:py-24 lg:pb-28">
+        <div className="min-w-0 max-lg:order-2">
           <motion.h1
             {...rise(0)}
-            className="text-display-sm text-charcoal-950 sm:text-display-lg xl:text-display-xl"
+            className="text-display-sm text-charcoal-950 sm:text-display-md lg:text-display-lg xl:text-display-xl"
           >
             Atık toplamanın{" "}
-            <span className="relative whitespace-nowrap text-brand-700">
+            <span className="relative text-brand-700">
               dayanıklı
               <svg
                 viewBox="0 0 200 12"
@@ -64,18 +64,18 @@ export function Hero() {
 
           <motion.p
             {...rise(0.1)}
-            className="mt-7 max-w-xl text-lg leading-relaxed text-charcoal-600"
+            className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-charcoal-600 sm:mt-7 sm:text-lg"
           >
             Galvaniz, plastik ve yeraltı çöp konteynerlerini kendi tesisimizde
             üretiyoruz. Sac kesimden galvaniz banyosuna kadar tüm süreç bizde
             olduğu için kaliteyi ve teslim tarihini biz garanti ediyoruz.
           </motion.p>
 
-          <motion.ul {...rise(0.18)} className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+          <motion.ul {...rise(0.18)} className="mt-6 flex flex-wrap gap-x-5 gap-y-2.5 sm:mt-8 sm:gap-x-6 sm:gap-y-3">
             {highlights.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-2 text-[0.9375rem] text-charcoal-700"
+                className="flex items-center gap-2 text-sm text-charcoal-700 sm:text-[0.9375rem]"
               >
                 <CheckIcon className="h-4.5 w-4.5 shrink-0 text-brand-600" />
                 {item}
@@ -83,8 +83,8 @@ export function Hero() {
             ))}
           </motion.ul>
 
-          <motion.div {...rise(0.26)} className="mt-10 flex flex-wrap gap-3">
-            <ButtonLink href="/urunler" size="lg" className="group">
+          <motion.div {...rise(0.26)} className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
+            <ButtonLink href="/urunler" size="lg" className="group w-full sm:w-auto">
               Ürünleri keşfet
               <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
             </ButtonLink>
@@ -94,6 +94,7 @@ export function Hero() {
               rel="noopener noreferrer"
               variant="outline"
               size="lg"
+              className="w-full sm:w-auto"
             >
               <WhatsAppIcon className="h-5 w-5 text-brand-700" />
               WhatsApp ile teklif al
@@ -105,7 +106,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: reduce ? 1 : 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: reduce ? 0 : 0.9, delay: 0.12, ease }}
-          className="relative"
+          className="relative min-w-0 max-lg:order-first lg:pb-4"
         >
           <HeroVisual
             src="/images/hero-galvaniz-konteyner.jpg"
@@ -116,7 +117,7 @@ export function Hero() {
             initial={{ opacity: 0, y: reduce ? 0 : 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduce ? 0 : 0.7, delay: 0.45, ease }}
-            className="absolute -bottom-6 left-4 right-4 rounded-2xl border border-brand-100 bg-white p-5 shadow-card-hover sm:left-8 sm:right-auto sm:max-w-xs"
+            className="relative mx-4 -mt-8 rounded-2xl border border-brand-100 bg-white p-4 shadow-card-hover sm:absolute sm:-bottom-6 sm:left-8 sm:right-auto sm:mx-0 sm:mt-0 sm:max-w-xs sm:p-5"
           >
             <p className="font-display text-3xl font-extrabold tracking-tight text-charcoal-950">
               500<span className="text-brand-600">+</span>

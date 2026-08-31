@@ -15,7 +15,7 @@ export function AboutSummary() {
       <div className="container-page grid items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal from="left">
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-4xl shadow-card-hover">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card-hover sm:rounded-4xl">
               {/* TODO: Gerçek üretim tesisi fotoğrafı ile değiştirilecek. */}
               <Image
                 src={placeholderImage("tekiz-hakkimizda-tesis", 1200, 900)}
@@ -26,7 +26,7 @@ export function AboutSummary() {
               />
             </div>
 
-            <div className="relative -mt-14 ml-auto mr-4 w-56 overflow-hidden rounded-3xl border-4 border-charcoal-50 shadow-card-hover sm:w-64">
+            <div className="relative -mt-10 ml-auto mr-3 w-36 overflow-hidden rounded-2xl border-4 border-charcoal-50 shadow-card-hover sm:-mt-14 sm:mr-4 sm:w-56 sm:rounded-3xl md:w-64">
               <div className="relative aspect-square">
                 <Image
                   src={placeholderImage("tekiz-hakkimizda-kaynak", 700, 700)}

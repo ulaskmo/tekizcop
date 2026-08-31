@@ -44,7 +44,7 @@ export default function NotFound() {
           ))}
         </ul>
 
-        <ButtonLink href="/" size="lg" className="group mt-10 self-start">
+        <ButtonLink href="/" size="lg" className="group mt-10 w-full self-start sm:w-auto">
           Ana sayfaya dön
           <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
         </ButtonLink>

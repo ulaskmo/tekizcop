@@ -13,7 +13,7 @@ export function QuoteCta() {
     <section className="bg-white pb-section">
       <div className="container-page">
         <Reveal>
-          <div className="relative isolate overflow-hidden rounded-4xl border border-brand-100 bg-brand-50 px-6 py-14 sm:px-12 lg:px-16 lg:py-20">
+          <div className="relative isolate overflow-hidden rounded-3xl border border-brand-100 bg-brand-50 px-5 py-10 sm:rounded-4xl sm:px-12 sm:py-14 lg:px-16 lg:py-20">
             <div
               className="absolute -bottom-24 -right-16 -z-10 h-80 w-80 rounded-full bg-brand-200/50 blur-[100px]"
               aria-hidden
@@ -39,7 +39,7 @@ export function QuoteCta() {
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-                <ButtonLink href="/iletisim#teklif" size="lg" className="group">
+                <ButtonLink href="/iletisim#teklif" size="lg" className="group w-full sm:w-auto">
                   Teklif formu
                   <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </ButtonLink>
@@ -50,6 +50,7 @@ export function QuoteCta() {
                   rel="noopener noreferrer"
                   variant="outline"
                   size="lg"
+                  className="w-full sm:w-auto"
                 >
                   <WhatsAppIcon className="h-5 w-5 text-brand-700" />
                   WhatsApp

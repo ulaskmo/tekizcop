@@ -46,7 +46,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
           </motion.div>
         </AnimatePresence>
 
-        <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-white/95 px-3.5 py-2 text-xs font-semibold text-charcoal-700 opacity-0 shadow-sm backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
+        <span className="absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-white/95 px-3 py-2 text-xs font-semibold text-charcoal-700 shadow-sm backdrop-blur sm:bottom-4 sm:right-4 sm:opacity-0 sm:transition-opacity sm:duration-300 sm:group-hover:opacity-100">
           <ZoomIcon className="h-4 w-4" />
           Büyüt
         </span>

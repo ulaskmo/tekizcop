@@ -23,7 +23,7 @@ export function WhatsAppButton() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp ile teklif alın"
-          className="group fixed bottom-5 right-5 z-30 flex items-center gap-0 overflow-hidden rounded-full bg-[#25D366] pl-4 pr-4 text-white shadow-[0_8px_30px_-8px_rgba(37,211,102,0.7)] sm:bottom-7 sm:right-7"
+          className="group fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] z-30 flex items-center gap-0 overflow-hidden rounded-full bg-[#25D366] pl-4 pr-4 text-white shadow-[0_8px_30px_-8px_rgba(37,211,102,0.7)] sm:bottom-7 sm:right-7"
           initial={{ opacity: 0, scale: 0.8, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 12 }}

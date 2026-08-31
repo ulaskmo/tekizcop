@@ -157,7 +157,7 @@ export default function ProductDetailPage({ params }: Params) {
               </div>
             </dl>
 
-            <div className="mt-8 rounded-3xl border border-brand-200 bg-brand-50 p-6">
+            <div className="mt-8 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:rounded-3xl sm:p-6">
               <p className="font-display text-lg font-semibold text-brand-900">
                 Bu ürün için fiyat teklifi alın
               </p>
@@ -167,10 +167,10 @@ export default function ProductDetailPage({ params }: Params) {
                 özelleştirilebilir.
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <ButtonLink
                   href={`/iletisim?urun=${encodeURIComponent(product.name)}#teklif`}
-                  className="group"
+                  className="group w-full sm:w-auto"
                 >
                   Teklif isteyin
                   <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -182,6 +182,7 @@ export default function ProductDetailPage({ params }: Params) {
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="outline"
+                  className="w-full sm:w-auto"
                 >
                   <WhatsAppIcon className="h-5 w-5 text-brand-700" />
                   WhatsApp
@@ -237,8 +238,8 @@ export default function ProductDetailPage({ params }: Params) {
 
           <div className="lg:col-span-5">
             <Reveal from="right">
-              <div className="overflow-hidden rounded-3xl border border-charcoal-200 bg-white shadow-card lg:sticky lg:top-28">
-                <div className="border-b border-brand-100 bg-brand-50 px-6 py-5">
+              <div className="overflow-x-auto rounded-2xl border border-charcoal-200 bg-white shadow-card sm:rounded-3xl lg:sticky lg:top-28">
+                <div className="border-b border-brand-100 bg-brand-50 px-4 py-4 sm:px-6 sm:py-5">
                   <h2 className="font-display text-lg font-semibold text-charcoal-950">
                     Teknik özellikler
                   </h2>
@@ -257,11 +258,11 @@ export default function ProductDetailPage({ params }: Params) {
                       >
                         <th
                           scope="row"
-                          className="w-1/2 px-6 py-3.5 align-top font-medium text-charcoal-500"
+                          className="w-1/2 px-4 py-3.5 align-top font-medium text-charcoal-500 sm:px-6"
                         >
                           {spec.label}
                         </th>
-                        <td className="px-6 py-3.5 align-top font-semibold text-charcoal-900">
+                        <td className="px-4 py-3.5 align-top font-semibold text-charcoal-900 sm:px-6">
                           {spec.value}
                         </td>
                       </tr>

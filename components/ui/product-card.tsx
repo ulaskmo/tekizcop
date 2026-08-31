@@ -38,12 +38,12 @@ export function ProductCard({ product, priority, className }: ProductCardProps) 
           aria-hidden
         />
 
-        <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-wider text-charcoal-700 shadow-sm backdrop-blur">
+        <span className="absolute left-3 top-3 max-w-[calc(100%-5.5rem)] truncate rounded-full bg-white/95 px-2.5 py-1 text-[0.625rem] font-semibold uppercase tracking-wider text-charcoal-700 shadow-sm backdrop-blur sm:left-4 sm:top-4 sm:max-w-none sm:px-3 sm:py-1.5 sm:text-[0.6875rem]">
           {getCategoryName(product.category)}
         </span>
 
         {product.litre ? (
-          <span className="absolute right-4 top-4 rounded-full bg-brand-700 px-3 py-1.5 text-[0.6875rem] font-bold text-white shadow-sm">
+          <span className="absolute right-3 top-3 rounded-full bg-brand-700 px-2.5 py-1 text-[0.625rem] font-bold text-white shadow-sm sm:right-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-[0.6875rem]">
             {product.litre >= 1000
               ? `${(product.litre / 1000).toLocaleString("tr-TR")} m³`
               : `${product.litre} L`}

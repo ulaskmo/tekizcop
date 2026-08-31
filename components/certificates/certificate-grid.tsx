@@ -40,7 +40,7 @@ export function CertificateGrid({ certificates }: { certificates: Certificate[] 
                     Belgeyi görüntüle
                   </span>
                 </span>
-                <span className="absolute left-4 top-4 rounded-full bg-brand-700 px-3 py-1.5 text-[0.6875rem] font-bold text-white shadow-sm">
+                <span className="absolute left-3 top-3 rounded-full bg-brand-700 px-2.5 py-1 text-[0.6875rem] font-bold text-white shadow-sm sm:left-4 sm:top-4 sm:px-3 sm:py-1.5">
                   {certificate.year}
                 </span>
               </button>

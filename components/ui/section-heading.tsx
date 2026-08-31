@@ -73,7 +73,7 @@ export function SectionHeading({
         <Reveal delay={0.12}>
           <div
             className={cn(
-              "mt-5 max-w-2xl text-[1.0625rem] leading-relaxed",
+              "mt-5 max-w-2xl text-pretty text-base leading-relaxed sm:text-[1.0625rem]",
               isLight ? "text-charcoal-300" : "text-charcoal-600",
               align === "center" && "mx-auto",
             )}

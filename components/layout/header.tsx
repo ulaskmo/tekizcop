@@ -43,11 +43,11 @@ export function Header() {
       >
         <div
           className={cn(
-            "container-page flex items-center justify-between gap-6 transition-all duration-300 ease-out-expo",
+            "container-page flex min-w-0 items-center justify-between gap-2 sm:gap-6 transition-all duration-300 ease-out-expo",
             scrolled ? "h-16" : "h-20",
           )}
         >
-          <Logo />
+          <Logo className="min-w-0" />
 
           <nav aria-label="Ana menü" className="hidden lg:block">
             <ul className="flex items-center gap-0.5">

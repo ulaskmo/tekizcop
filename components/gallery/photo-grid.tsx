@@ -25,7 +25,7 @@ export function PhotoGrid({ photos }: { photos: GalleryPhoto[] }) {
 
   return (
     <div>
-      <div className="-mx-5 overflow-x-auto px-5 no-scrollbar lg:mx-0 lg:px-0">
+      <div className="-mx-4 overflow-x-auto px-4 no-scrollbar sm:-mx-8 sm:px-8 lg:mx-0 lg:px-0">
         <ul className="flex w-max items-center gap-2">
           {tabs.map((tab) => {
             const isActive = tab === filter;
@@ -100,11 +100,11 @@ export function PhotoGrid({ photos }: { photos: GalleryPhoto[] }) {
                 />
 
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-charcoal-950/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-charcoal-950/10 to-transparent opacity-90 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100"
                   aria-hidden
                 />
 
-                <span className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 opacity-0 transition-all duration-500 ease-out-expo group-hover:opacity-100">
+                <span className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-3 opacity-100 transition-all duration-500 ease-out-expo sm:inset-x-4 sm:bottom-4 md:opacity-0 md:group-hover:opacity-100">
                   <span className="text-left text-sm font-semibold leading-snug text-white">
                     {photo.title}
                   </span>

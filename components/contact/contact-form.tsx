@@ -248,7 +248,7 @@ export function ContactForm() {
           Bilgileriniz yalnızca teklif hazırlamak için kullanılır, üçüncü
           taraflarla paylaşılmaz.
         </p>
-        <Button type="submit" size="lg" disabled={disabled} className="group">
+        <Button type="submit" size="lg" disabled={disabled} className="group w-full sm:w-auto">
           {disabled ? "Gönderiliyor…" : "Teklif talebini gönder"}
           {!disabled ? (
             <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />

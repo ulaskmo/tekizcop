@@ -52,10 +52,22 @@ const config: Config = {
         display: ["var(--font-display)", "var(--font-inter)", "sans-serif"],
       },
       fontSize: {
-        "display-sm": ["2.25rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "display-md": ["3rem", { lineHeight: "1.05", letterSpacing: "-0.025em" }],
-        "display-lg": ["3.75rem", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
-        "display-xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.035em" }],
+        "display-sm": [
+          "clamp(1.75rem, 1.2rem + 2.6vw, 2.25rem)",
+          { lineHeight: "1.12", letterSpacing: "-0.02em" },
+        ],
+        "display-md": [
+          "clamp(2.125rem, 1.2rem + 3.2vw, 3rem)",
+          { lineHeight: "1.08", letterSpacing: "-0.025em" },
+        ],
+        "display-lg": [
+          "clamp(2.375rem, 0.9rem + 4.2vw, 3.75rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.03em" },
+        ],
+        "display-xl": [
+          "clamp(2.5rem, 0.4rem + 5.2vw, 4.5rem)",
+          { lineHeight: "1.02", letterSpacing: "-0.035em" },
+        ],
       },
       spacing: {
         4.5: "1.125rem",

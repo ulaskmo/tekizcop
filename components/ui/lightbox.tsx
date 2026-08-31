@@ -61,7 +61,7 @@ export function Lightbox({
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-col bg-charcoal-950/95 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex flex-col bg-charcoal-950/95 pt-[env(safe-area-inset-top)] backdrop-blur-sm pb-[env(safe-area-inset-bottom)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

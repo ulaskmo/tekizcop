@@ -90,7 +90,7 @@ export default function ContactPage() {
 
           <div className="lg:col-span-5">
             <Reveal from="right">
-              <div className="rounded-4xl border border-brand-100 bg-brand-50 p-8 sm:p-9">
+              <div className="rounded-3xl border border-brand-100 bg-brand-50 p-6 sm:rounded-4xl sm:p-9">
                 <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-brand-700">
                   Doğrudan iletişim
                 </h2>
@@ -210,7 +210,7 @@ export default function ContactPage() {
           src={`https://www.google.com/maps?q=${mapQuery}&hl=tr&z=15&output=embed`}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="h-[26rem] w-full border-0 grayscale-[35%] lg:h-[32rem]"
+          className="h-[16rem] w-full border-0 grayscale-[35%] sm:h-[26rem] lg:h-[32rem]"
         />
       </section>
     </>

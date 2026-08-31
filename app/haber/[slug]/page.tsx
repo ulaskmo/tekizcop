@@ -78,7 +78,7 @@ export default function NewsDetailPage({ params }: Params) {
             className="absolute -left-24 top-0 -z-10 h-80 w-80 rounded-full bg-brand-200/50 blur-[110px]"
             aria-hidden
           />
-          <div className="container-page py-14 lg:py-20">
+          <div className="container-page py-10 sm:py-14 lg:py-20">
             <Breadcrumbs
               tone="dark"
               items={[
@@ -110,10 +110,10 @@ export default function NewsDetailPage({ params }: Params) {
           </div>
         </header>
 
-        <div className="bg-white py-14 lg:py-20">
+        <div className="bg-white py-10 sm:py-14 lg:py-20">
           <div className="container-page">
             <Reveal from="none">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-4xl bg-charcoal-100 shadow-card">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-charcoal-100 shadow-card sm:rounded-4xl">
                 {/* TODO: Gerçek haber görseli ile değiştirilecek (frontmatter coverImage). */}
                 <Image
                   src={post.coverImage}
