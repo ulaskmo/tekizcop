@@ -765,9 +765,13 @@ export function getProductsByCategory(categorySlug: string) {
   return products.filter((p) => p.category === categorySlug);
 }
 
+/** Öne çıkan ürünler; sayı yetmezse kalan ürünlerle `limit`e tamamlanır. */
 export function getFeaturedProducts(limit = 8) {
   const featured = products.filter((p) => p.featured);
-  return (featured.length >= limit ? featured : [...featured, ...products.filter((p) => !p.featured)]).slice(0, limit);
+  if (featured.length >= limit) return featured.slice(0, limit);
+
+  const rest = products.filter((p) => !p.featured);
+  return [...featured, ...rest].slice(0, limit);
 }
 
 /** Aynı kategoriden, verilen ürün hariç ilgili ürünleri döndürür. */
