@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { siteConfig } from "@/data/site";
 
 import "./globals.css";
@@ -32,7 +35,20 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" className={`${inter.variable} ${display.variable}`}>
-      <body className="font-sans">{children}</body>
+      <body className="flex min-h-screen flex-col font-sans">
+        <a
+          href="#icerik"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand-700 focus:px-5 focus:py-3 focus:text-sm focus:font-medium focus:text-white"
+        >
+          İçeriğe geç
+        </a>
+        <Header />
+        <main id="icerik" className="flex-1 pt-20">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

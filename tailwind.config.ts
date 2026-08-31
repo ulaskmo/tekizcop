@@ -58,7 +58,10 @@ const config: Config = {
         "display-xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.035em" }],
       },
       spacing: {
-        "section": "clamp(4rem, 8vw, 7.5rem)",
+        4.5: "1.125rem",
+        5.5: "1.375rem",
+        13: "3.25rem",
+        section: "clamp(4rem, 8vw, 7.5rem)",
       },
       maxWidth: {
         container: "80rem",

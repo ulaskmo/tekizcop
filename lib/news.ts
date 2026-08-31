@@ -43,7 +43,11 @@ export function getAllNews(): NewsPost[] {
 }
 
 export function getNewsMeta(): NewsMeta[] {
-  return getAllNews().map(({ body: _body, ...meta }) => meta);
+  return getAllNews().map((post) => {
+    const meta = { ...post } as Partial<NewsPost>;
+    delete meta.body;
+    return meta as NewsMeta;
+  });
 }
 
 export function getNewsPost(slug: string): NewsPost | undefined {
